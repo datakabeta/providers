@@ -1,90 +1,88 @@
-//Constructs and returns a multichoice Entity which presents 3  reasons for a user to select from.
-exports.handler = (event, context, callback) => {
-	var reasonsEntity = {
-		"name": "",
-		"kind": "text",
-		"value": "Ticket selection",
-		"type": "error",
+//Sample construct of a multiChoice entity with static data.
+var reasonsEntity = {
+	"name": "",
+	"kind": "text",
+	"value": "Ticket selection",
+	"type": "error",
+	"properties": [{
+		"name": "type",
+		"kind": "type",
+		"value": "multichoice",
+		"type": "text"
+	}, {
+		"name": "header",
+		"kind": "header",
+		"value": "Please provide a reason for cancellation.",
+		"type": "text"
+	}, {
+		"name": "1",
+		"kind": "1",
+		"value": "Reason1",
+		"type": "text",
 		"properties": [{
-			"name": "type",
-			"kind": "type",
-			"value": "multichoice",
-			"type": "text"
-		}, {
-			"name": "header",
-			"kind": "header",
-			"value": "Please provide a reason for cancellation.",
-			"type": "text"
-		}, {
-			"name": "1",
-			"kind": "1",
+			"name": "text",
+			"kind": "text",
 			"value": "Reason1",
-			"type": "text",
-			"properties": [{
-				"name": "text",
-				"kind": "text",
-				"value": "Reason1",
-				"type": "text"
-			}, {
-				"name": "statement",
-				"kind": "statement",
-				"value": "subscriber reason1",
-				"type": "text"
-			}, {
-				"name": "quickOption",
-				"kind": "quickOption",
-				"value": "Reason1",
-				"type": "text"
-			}]
+			"type": "text"
 		}, {
-			"name": "2",
-			"kind": "2",
-			"value": "5011111111",
-			"type": "text",
-			"properties": [{
-				"name": "text",
-				"kind": "text",
-				"value": "Reason2",
-				"type": "text"
-			}, {
-				"name": "statement",
-				"kind": "statement",
-				"value": "subscriber reason2",
-				"type": "text"
-			}, {
-				"name": "quickOption",
-				"kind": "quickOption",
-				"value": "Reason2",
-				"type": "text"
-			}]
+			"name": "statement",
+			"kind": "statement",
+			"value": "subscriber reason1",
+			"type": "text"
 		}, {
-			"name": "3",
-			"kind": "3",
-			"value": "Reason 3",
-			"type": "text",
-			"properties": [{
-				"name": "text",
-				"kind": "text",
-				"value": "Reason3",
-				"type": "text"
-			}, {
-				"name": "statement",
-				"kind": "statement",
-				"value": "subscriber reason3",
-				"type": "text"
-			}, {
-				"name": "quickOption",
-				"kind": "quickOption",
-				"value": "Reason3",
-				"type": "text"
-			}]
-		}, {
-			"name": "count",
-			"kind": "count",
-			"value": "3",
-			"type": "number"
+			"name": "quickOption",
+			"kind": "quickOption",
+			"value": "Reason1",
+			"type": "text"
 		}]
-	}
-	//Returns multichoice Entity. 
-	return nano.sendGetEntityResult(callback, [reasonsEntity], "CANCELLATION_REASON");
-};
+	}, {
+		"name": "2",
+		"kind": "2",
+		"value": "5011111111",
+		"type": "text",
+		"properties": [{
+			"name": "text",
+			"kind": "text",
+			"value": "Reason2",
+			"type": "text"
+		}, {
+			"name": "statement",
+			"kind": "statement",
+			"value": "subscriber reason2",
+			"type": "text"
+		}, {
+			"name": "quickOption",
+			"kind": "quickOption",
+			"value": "Reason2",
+			"type": "text"
+		}]
+	}, {
+		"name": "3",
+		"kind": "3",
+		"value": "Reason 3",
+		"type": "text",
+		"properties": [{
+			"name": "text",
+			"kind": "text",
+			"value": "Reason3",
+			"type": "text"
+		}, {
+			"name": "statement",
+			"kind": "statement",
+			"value": "subscriber reason3",
+			"type": "text"
+		}, {
+			"name": "quickOption",
+			"kind": "quickOption",
+			"value": "Reason3",
+			"type": "text"
+		}]
+	}, {
+		"name": "count",
+		"kind": "count",
+		"value": "3",
+		"type": "number"
+	}]
+}
+//Returns multichoice Entity. 
+return nano.sendGetEntityResult(callback, [reasonsEntity], "CANCELLATION_REASON");
