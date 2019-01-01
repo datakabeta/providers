@@ -1,4 +1,6 @@
-	var reasonsEntity = {
+//Construct and return a multichoice Entity with static data which presents dummy reasons for a user to select from.
+
+var reasonsEntity = {
         "name": "",
         "kind": "text",
         "value": "Ticket selection",
@@ -84,6 +86,7 @@
         }]
     };
 
-    return nano.sendGetEntityResult(callback,[reasonsEntity], "CANCELLATION_REASON");
+  //Returns reasons Entity. CANCELLATION_REASON entity would be a Detect function which processes the user's choice.
+  return nano.sendGetEntityResult(callback,[reasonsEntity], "CANCELLATION_REASON"); 
 					
 
