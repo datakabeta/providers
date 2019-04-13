@@ -21,7 +21,8 @@ exports.handler = (event, context, callback) => {
 		"kind": "VACATIONBALANCE",
 		"type": "number",
 		"lifecycle": "topic",
-		"value": getVacationBalance()
+		"value": getVacationBalance(), 
+		"dependencies": ["USERID"]
     });
     
 	//Return Entity
