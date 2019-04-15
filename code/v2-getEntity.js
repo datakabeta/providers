@@ -14,7 +14,4 @@ exports.handler = (event, context, callback) => {
 		return nano.sendGetEntityResult(callback, [vacationEntity]);
 	}
 	
-	
-
-}
 
