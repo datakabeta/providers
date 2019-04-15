@@ -4,15 +4,11 @@ nanorep.floatingWidget.on('load', function() {
     this.api.conversation.registerClientMethods({
 
         vacationBalance: function() {
-            balance = getVacationBalance(); //API call to HR software
+            balance = Math.floor((Math.random() * 10) + 1); //API call to HR software
             return balance;
     } 
 
     });  
 });
 
-//Fake API call to HR Software
-function getVacationBalance() {
-    return Math.floor((Math.random() * 10) + 1);
-}
 
