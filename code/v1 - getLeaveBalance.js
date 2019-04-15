@@ -13,6 +13,6 @@ nanorep.floatingWidget.on('load', function() {
 
 //Fake API call to HR Software
 function getVacationBalance() {
-    return Math.floor((Math.random() * 10) + 1);;
+    return Math.floor((Math.random() * 10) + 1);
 }
 
