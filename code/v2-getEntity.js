@@ -7,11 +7,16 @@ exports.handler = (event, context, callback) => {
 			"kind": "VACATIONBALANCE", 
 			"type": "number",  
 			"lifecycle": "topic", 
-			"value": Math.floor((Math.random() * 10) + 1) 
+			"value": getVacationBalance() 
 		});
 		
 		//Return Entity
 		return nano.sendGetEntityResult(callback, [vacationEntity]);
 	}
 	
+	//Fake API call to HR Software
+	function getVacationBalance() {
+		return Math.floor((Math.random() * 10) + 1);
+
+}
 
