@@ -5,8 +5,8 @@ nanorep.floatingWidget.on({
 			USERID: function(response) {
 				return {
 					"kind": "USERID",
-					"type": "text",
-					"value": "a123",
+					"type": "number",
+					"value": "123",
 					"lifecycle": "persistent"
                 }
             }};
