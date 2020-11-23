@@ -29,7 +29,7 @@ exports.handler = (event, context, callback) => {
 
 //Fake API call to HR Software
 function getVacationBalance(userID) {
-    return Math.floor((Math.random() * 10) + 1);;
+    return userID*100;
 }
 
 
